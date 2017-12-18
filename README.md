@@ -152,7 +152,7 @@ docker create \
         -e PUID=1000 -e PGID=1000 \
         -e TZ=America/Toronto \
         -e YAP_USERNAME=MYUSERNAME -e YAP_PASSWORD=MYPASSWORD \
-	    -e YAP_SERVICE=viewms -e YAP_STREAM=rtmp \
+	-e YAP_SERVICE=viewms -e YAP_STREAM=rtmp \
         -e YAP_QUALITY=1 -e YAP_SERVER=dnae4 \
         -v /home/user/.config/sstvproxy:/config \
         stokkes/sstvproxy
