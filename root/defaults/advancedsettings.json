@@ -1,0 +1,13 @@
+{
+  "networkdiscovery": 0,
+  "ffmpegloc": "/usr/bin/ffmpeg",
+  "kodiuser": "",
+  "kodipass": "",
+  "extram3u8url":"",
+  "extram3u8name":"",
+  "extram3u8file": "",
+  "tvhredirect": "False",
+  "tvhaddress":"127.0.0.1",
+  "tvhuser":"",
+  "tvhpass":""
+}

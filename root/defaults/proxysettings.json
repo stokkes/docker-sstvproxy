@@ -1,0 +1,13 @@
+{
+	"service": "viewms",
+	"username": "USERNAME",
+	"password": "PASSWORD",
+	"server": "dnae3",
+	"quality": 1,
+	"stream": "rtmp",
+	"ip": "",
+	"port": 8098,
+	"externalip": "",
+	"externalport": 8099,
+	"kodiport": 8080
+}
