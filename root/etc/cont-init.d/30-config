@@ -11,6 +11,18 @@
 [ ! -f /config/advancedsettings.json ] && \
 	cp /defaults/advancedsettings.json /config
 
+# Check for variable YAP_GIT_BRANCH and use that instead of `master` if it exists.
+if [[ $YAP_GIT_BRANCH && {$YAP_GIT_BRANCH-x} ]]; then
+	GIT_BRANCH=$YAP_GIT_BRANCH
+else
+	GIT_BRANCH=master
+fi
+
+# install app 
+[[ ! -d "/app/sstvproxy/.git" ]] && \
+	echo "Installing sstvProxy from branch: $GIT_BRANCH"
+	git clone --branch $GIT_BRANCH https://github.com/vorghahn/sstvProxy.git /app/sstvproxy
+
 # Get docker IP address and replace it in proxysettings.json
 IPADDR=`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'`
 sed -ri "s/([\"']ip[\"']:)[^\"']*([\"'])[^\"']*([\"'])/\1 \2${IPADDR}\3/g" /config/proxysettings.json

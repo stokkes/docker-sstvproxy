@@ -34,6 +34,7 @@ So INSIDE the container, 8098 is mapped to the local port and 8099 is mapped to 
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 * `-e TZ` for timezone EG. Europe/London, America/NewYork
+* `-e YAP_GIT_BRANCH` for specifying which branch to use (`master` or `dev`), defaults to `master` if not set
 * `-e YAP_SERVICE` for code for SS service EG. `viewms`, etc.
 * `-e YAP_USERNAME` for SS username
 * `-e YAP_PASSWORD` for SS password
@@ -158,3 +159,7 @@ docker create \
         stokkes/sstvproxy
 ```
 
+## Versions
+
+**2017-12-21**: Pull latest version from git on create, allow specifying git branch to pull
+**2017-12-18**: Initial release

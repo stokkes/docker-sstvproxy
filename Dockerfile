@@ -11,10 +11,7 @@ RUN \
 		jq \
 		git \
 		curl && \
-	pip3 install flask requests && \
-	mkdir -p \
-		/app/sstvproxy && \
-	git clone https://github.com/vorghahn/sstvProxy.git /app/sstvproxy
+	pip3 install flask requests 
 
 # add local files
 COPY root/ /
