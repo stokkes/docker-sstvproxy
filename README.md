@@ -21,10 +21,10 @@ Currently only the master branch is available from YAP.
 
 ## Parameters
 
-`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
+The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
 For example with a port -p external:internal - what this shows is the port mapping from internal to external of the container.
 So -p 8080:80 would expose port 80 from inside the container to be accessible from the host's IP on port 8080
-http://192.168.x.x:8080 would show you what's running INSIDE the container on port 80.`
+http://192.168.x.x:8080 would show you what's running INSIDE the container on port 80.
 
 So INSIDE the container, 8098 is mapped to the local port and 8099 is mapped to the external port. You can map those to your host on any port you want. The right side of the colon must always be 8098/8099 or this container won't work.
 
@@ -42,6 +42,7 @@ So INSIDE the container, 8098 is mapped to the local port and 8099 is mapped to 
 * `-e YAP_QUALITY` for quality (`1` for HD, `2` for HQ, `3` for SD)
 * `-e YAP_STREAM` for stream type (`rtmp` or `hls`) 
 * `-e YAP_EXTERNALIP` for specifying external IP to use
+* `-e YAP_EXTERNALPORT` for specifying external PORT to use
 * `-e YAP_KODIPORT` for Kodi port
 
 ### User / Group Identifiers
